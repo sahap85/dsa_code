@@ -1,0 +1,241 @@
+##print name n times using recursion
+
+#include <iostream>
+#include<vector>
+
+         using namespace std; 
+
+         void name(int i , int n)
+         {
+if(i>n)
+{
+    return;
+}
+cout<<"raj"<<endl;
+name(i+1,n);
+         }
+          int main()
+          {
+              #ifndef ONLINE JUDGE 
+                freopen("input.txt", "r", stdin) ;
+                 freopen("output.txt", "w", stdout);
+                  #endif ios_base::sync_with_stdio(false);
+                   cin.tie(NULL); cout.tie(NULL);
+
+
+           int n;
+            cin>>n;
+            name(1,n);
+ return 0;
+
+          }
+          
+          
+          ##print n no using recursion
+          
+          #include <iostream>
+#include<vector>
+
+         using namespace std; 
+
+         void num(int i , int n)
+         {
+if(i>n)
+{
+    return;
+}
+cout<<i<<endl;
+num(i+1,n);
+         }
+
+
+          int main()
+          {
+              #ifndef ONLINE JUDGE 
+                freopen("input.txt", "r", stdin) ;
+                 freopen("output.txt", "w", stdout);
+                  #endif ios_base::sync_with_stdio(false);
+                   cin.tie(NULL); cout.tie(NULL);
+
+
+           int n;
+            cin>>n;
+            num(1,n);
+
+          return 0;
+          }
+          
+ ##print n no using recursion and backtracking
+                   
+          
+          #include <iostream>
+#include<vector>
+
+         using namespace std; 
+
+         void num(int i , int n)
+         {
+if(i>n)
+{
+    return;
+}
+
+num(i+1,n);
+cout<<i<<endl;
+         }
+
+
+          int main()
+          {
+              #ifndef ONLINE JUDGE 
+                freopen("input.txt", "r", stdin) ;
+                 freopen("output.txt", "w", stdout);
+                  #endif ios_base::sync_with_stdio(false);
+                   cin.tie(NULL); cout.tie(NULL);
+
+
+           int n;
+            cin>>n;
+            num(1,n);
+
+          return 0;
+          }
+          
+          ##sum of n no using recursion
+          
+          #include <iostream>
+#include<vector>
+
+         using namespace std; 
+
+         void num(int i , int n , int sum)
+         {
+if(i>n)
+{
+
+    cout<<sum;
+    return;
+}
+sum=sum+i;
+num(i+1,n,sum);
+
+         }
+
+
+          int main()
+          {
+              #ifndef ONLINE JUDGE 
+                freopen("input.txt", "r", stdin) ;
+                 freopen("output.txt", "w", stdout);
+                  #endif ios_base::sync_with_stdio(false);
+                   cin.tie(NULL); cout.tie(NULL);
+
+
+           int n;
+            cin>>n;
+            int sum=0;
+            num(1,n, sum);
+
+          return 0;
+          }
+          
+          
+          sum using function
+          
+          #include <iostream>
+#include<vector>
+
+         using namespace std; 
+
+         int sum(int n)
+         {
+if(n==0)
+return 0;
+return n+sum(n-1);
+
+
+
+
+         }
+
+
+          int main()
+          {
+              #ifndef ONLINE JUDGE 
+                freopen("input.txt", "r", stdin) ;
+                 freopen("output.txt", "w", stdout);
+                  #endif ios_base::sync_with_stdio(false);
+                   cin.tie(NULL); cout.tie(NULL);
+
+
+           int n;
+            cin>>n;
+           cout<<sum(n);
+          return 0;
+          }
+          
+          
+          swap an array using recursion
+          
+          #include <iostream>
+#include<vector>
+
+         using namespace std; 
+void swaparaay(int i, int arr[], int n)
+{
+
+if(i>n/2)
+{
+    return ;
+}
+  swap(arr[i] , arr[n-1-i]);
+
+swaparaay( i+1,arr,  n);
+
+}
+
+
+
+
+
+    
+
+
+          int main()
+          {
+             
+
+
+              #ifndef ONLINE JUDGE 
+                freopen("input.txt", "r", stdin) ;
+                 freopen("output.txt", "w", stdout);
+                  #endif ios_base::sync_with_stdio(false);
+                   cin.tie(NULL); cout.tie(NULL);
+
+
+             
+
+int n;
+cin>>n;
+int arr[n];
+for(int i=0;i<n;i++)
+{
+cin>>arr[i];
+}
+
+swaparaay(0,arr, n); 
+
+
+
+
+
+
+for(int i=0;i<n;i++)
+{
+cout<<arr[i];
+}
+return 0;
+          }
+          
+          
+          
