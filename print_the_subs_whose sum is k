@@ -1,0 +1,67 @@
+#include <iostream>
+#include<vector>
+
+         using namespace std; 
+void subs(int ind, int n, vector<int>&ds,int arr[], int target, int sum )
+{ 
+  
+  if(ind==n)
+  {
+        if(sum ==target)
+        {
+              for(auto it : ds)
+              
+              {
+                cout<<it<<" ";
+              
+
+              }
+              cout<<endl;
+        }
+    return;
+  }
+ds.push_back(arr[ind]);
+sum+=arr[ind];
+subs(ind+1,n,ds,arr,target, sum);
+ds.pop_back();
+sum-=arr[ind];
+
+
+subs(ind+1,n,ds,arr,target,sum);
+
+
+
+
+}
+
+
+
+
+
+    
+
+
+          int main()
+          {
+            #ifndef ONLINE JUDGE 
+                freopen("input.txt", "r", stdin) ;
+                 freopen("output.txt", "w", stdout);
+                  #endif ios_base::sync_with_stdio(false);
+                   cin.tie(NULL); cout.tie(NULL);
+
+
+
+           int sum=0;  
+int n=5;
+int arr[]={2,3,4,5,1};
+vector<int>ds;
+int target=5;
+subs(0,n,ds,arr, target,sum);
+
+
+
+
+
+        
+          return 0;
+          }
